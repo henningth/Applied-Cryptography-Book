@@ -10,7 +10,9 @@ Applied Cryptography
    :maxdepth: 2
    :caption: Contents:
 
-introduction
+   introduction
+   simpleciphers
+   mechanicalciphers
 
 Indices and tables
 ==================
