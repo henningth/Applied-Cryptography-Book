@@ -13,6 +13,8 @@ Applied Cryptography
    introduction
    simpleciphers
    mechanicalciphers
+   blockciphers
+   streamciphers
 
 Indices and tables
 ==================
