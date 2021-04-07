@@ -27,16 +27,18 @@ To decrypt the ciphertext, we need to do the inverse operation. In our case, tha
 ciphertext three places backwards in the alphabet.
 
 The number three is used for both encrypting and decrypting, and this is called the *key*. So in our example, we use 
-:math: `3` for encrypting and :math: `-3` for decrypting.
+:math:`3` for encrypting and :math:`-3` for decrypting.
 
-The key is not limited to be three, it can be any integer. For example, the key could be :math: `8`. Using this key on the plaintext 
+The key is not limited to be three, it can be any integer. For example, the key could be :math:`8`. Using this key on the plaintext 
 ``ATTACK``, then "A" is shifted to "I", but when we shift "T", we reach the end of the alphabet, and therefore start at the beginning. 
 So "T" is shifted to "B". This is similar to a clock, where if the time is 10AM and we add 25 hours, we get to 11AM. We would get 
 the same result if we added 1 hour, so the rule in this case is ``25 = 1``. In a similar way, ``26 = 2``. So in the clock example, 
 if we get 24 or above, we subtract 24. This is called computation *modulo* 24. We write the addition as follows:
+
 .. math::
     a + b \mod 24,
-where :math: `a` and :math: `b` are integers. Taking :math: `a=10` and :math: `b=25` (as in the first example), the computation is:
+
+where :math:`a` and :math:`b` are integers. Taking :math:`a=10` and :math:`b=25` (as in the first example), the computation is:
 
 .. math::
     \begin{align}
