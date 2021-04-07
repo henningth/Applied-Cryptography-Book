@@ -16,13 +16,24 @@ for simplicity we consider in this example the English alphabet:
 .. math::
     \{A, B, C, \ldots, Z\}.
 
+This is not the only possible alphabet, as we will see later in the book.
+
+The main idea of the Caesar Cipher is the following. Suppose that when we want to encrypt the message ``ATTACK``. 
+Then we shift each character three places forward in the alphabet. So the "A" becomes "D", "T" becomes "W" and so on. 
+We then end up with the encrypted text ``DWWDFN``. The text we started with is called the *plaintext* (or *cleartext* in some 
+books), while the encrypted text is called *ciphertext*.
+
 Substitution Cipher
 ===================
 The substitution cipher...
 
 Exclusive OR (XOR)
 ==================
-Another way 
+Another way
+
+Exercises
+=========
+Exercise 1: 
 
 Further Reading
 ===============
