@@ -15,6 +15,12 @@ Applied Cryptography
    mechanicalciphers
    blockciphers
    streamciphers
+   hashing
+   macs
+   kdfs
+   keyexchange
+   rsa
+   signatures
 
 Indices and tables
 ==================
