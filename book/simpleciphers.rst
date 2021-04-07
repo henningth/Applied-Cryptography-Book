@@ -14,7 +14,7 @@ which was used in the ancient Roman empire for military communications. In this 
 for simplicity we consider in this example the English alphabet:
 
 .. math::
-    \\{A, B, C, \\ldots, Z\\}.
+    \{A, B, C, \ldots, Z\}.
 
 Substitution Cipher
 ===================
