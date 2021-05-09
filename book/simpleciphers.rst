@@ -177,6 +177,17 @@ are 24 possible pairings and so on. This means that there are:
 
 which equals 403.291.461.126.605.635.584.000.000.
 
+Substitution cipher in Python
+-----------------------------
+
+For implementing the substitution cipher in Python, we begin by defining a *key*. 
+
+Exercises
+---------
+
+**Exercise 5**:
+
+
 Exclusive OR (XOR)
 ==================
 Another way
