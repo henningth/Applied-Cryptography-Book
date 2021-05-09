@@ -63,6 +63,51 @@ console, we would do::
     result = 5 % 3
     print(result)
 
+To implement the Caesar cipher in Python, let us first make a list of the requirements for the cipher:
+
+* The cipher uses a fixed key, which is 3.
+* The cipher can encrypt and decrypt text from the standard English alphabet
+
+In this first version, we will use an imperative approach. In the exercises, some generalization will be proposed::
+
+    # Uses fixed key
+    key = 3
+
+    # Mapping each letter to a position in the alphabet
+    letterMapping = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6, 
+                        "H": 7, "I": 8, "J": 9, "K": 10, "L": 11, "M": 12, "N": 13,
+                        "O": 14, "P": 15, "Q": 16, "R": 17, "S": 18, "T": 19, "U": 20,
+                        "V": 21, "W": 22, "X": 23, "Y": 24, "Z": 25}
+
+    # Inverse mapping: maps each position to a letter
+    inverseLetterMapping = {0: "A", 1: "B", 2: "C", 3: "D", 4: "E", 5: "F", 6: "G", 
+                        7: "H", 8: "I", 9: "J", 10: "K", 11: "L", 12: "M", 13: "N",
+                        14: "O", 15: "P", 16: "Q", 17: "R", 18: "S", 19: "T", 20: "U",
+                        21: "V", 22: "W", 23: "X", 24: "Y", 25: "Z"}
+
+    # The plaintext
+    plaintext = "ATTACK"
+
+    # Convert each letter in the plaintext into its corresponding position
+    ciphertext = ""
+    for plainletter in plaintext:
+        cipherletterPosition = ( letterMapping[plainletter] + key ) % 24
+        cipherletter = inverseLetterMapping[cipherletterPosition]
+        ciphertext = ciphertext + cipherletter
+
+    # Prints the ciphertext, it should be DWWDFN
+    print(ciphertext)
+
+    # Convert each letter in the ciphertext back into the plaintext letter
+    decryptedPlaintext = ""
+    for cipherletter in ciphertext:
+        plainletterPosition = ( letterMapping[cipherletter] - key ) % 24
+        plainletter = inverseLetterMapping[plainletterPosition]
+        decryptedPlaintext = decryptedPlaintext + plainletter
+
+    # Prints the decrypted plaintext, should be ATTACK
+    print(decryptedPlaintext)
+
 Substitution Cipher
 ===================
 The substitution cipher...
