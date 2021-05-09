@@ -122,6 +122,11 @@ and another one for *decrypting* the ciphertext. In both of these loops,
 we find the position of each letter, add (or subtract) the key, 
 and compute modulo 26, which is the alphabet size.
 
+Note that because of the alphabet size, the number of keys is limited to 26. 
+This is a serious weakness of the Caesar Cipher (see also exercise 4).
+
+In the next section, we will study a cipher which has many more possible keys.
+
 Exercises
 ---------
 
@@ -141,7 +146,36 @@ find the corresponding plaintext *without* knowing the key?
 
 Substitution Cipher
 ===================
-The substitution cipher...
+In the previous section, we saw that the Caesar Cipher only has 26 possible keys. 
+We now look at a cipher which has a *much* larger number of keys, namely the 
+*substitution cipher*.
+
+As previously, we use the English alphabet with the 26 uppercase letters. The idea 
+is to pair each letter in the alphabet with a letter in the same alphabet. So for 
+example, one such pairing could be: 
+
+.. Insert figure here showing the pairing
+
+In the above, we see that "A" is paired with "M", "B" is paired with "K" and so on. 
+Such a pairing is also called a *permutation*.
+
+The substitution cipher is defined using a permutation, which is the *key*. Suppose now 
+that we want to encrypt the plaintext ``ATTACK`` using the key in figure x. 
+The ciphertext then becomes ``MXXMSK``. To decrypt the ciphertext, we simply 
+use the inverse permutation, which in figure x corresponds to reversing the 
+direction of the arrows. Using this, we can recover the original 
+plaintext ``ATTACK``.
+
+How many possible keys are there for the substitution cipher. This depends on the 
+alphabet size. Assuming the English alphabet with 26 letters, for the first letter "A" there 
+are 26 possible pairings (including "A" itself). Then for the next letter "B", there are **25** 
+possible pairings (because one letter has already been paired). Similarly, for "C" there 
+are 24 possible pairings and so on. This means that there are:
+
+.. math ::
+    26 \cdot 25 \cdot 24 \cdots 2 \cdot 1 = 26!
+
+which equals 403.291.461.126.605.635.584.000.000.
 
 Exclusive OR (XOR)
 ==================
@@ -150,3 +184,10 @@ Another way
 Further Reading
 ===============
 The book
+
+Solutions to Exercises
+======================
+
+.. Possible to use show/hide for this part?
+
+**Solution 1**: When using negative key values, 
