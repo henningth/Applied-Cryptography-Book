@@ -10,7 +10,10 @@ Another goal of this chapter is to introduce the necessary *terminology* which i
 Caesar Cipher
 =============
 Probably one of the first examples of protecting information was the *Caesar cipher*, 
-which was used in the ancient Roman empire for military communications. In this cipher, we have an *alphabet* of letters, 
+which was used in the ancient Roman empire for military communications. A *cipher* is a method for mapping 
+human-readable text into text which can't be read by humans. (We will give a more precise definition soon.)
+
+In this cipher, we have an *alphabet* of letters, 
 for simplicity we consider in this example the English alphabet:
 
 .. math::
@@ -23,8 +26,10 @@ Then we shift each character three places forward in the alphabet. So the "A" be
 We then end up with the encrypted text ``DWWDFN``. The text we started with is called the *plaintext* (or *cleartext* in some 
 books), while the encrypted text is called *ciphertext*.
 
-To decrypt the ciphertext, we need to do the inverse operation. In our case, that means that we shift each character in the 
-ciphertext three places backwards in the alphabet.
+To decrypt the ciphertext, we need to do the inverse operation. In cryptography, it is very important that ciphers are 
+*invertible*, so that we can recover the plaintext from the ciphertext.
+
+For the Caesar Cipher, that means that we shift each character in the ciphertext three places backwards in the alphabet.
 
 The number three is used for both encrypting and decrypting, and this is called the *key*. So in our example, we use 
 :math:`3` for encrypting and :math:`-3` for decrypting.
@@ -45,6 +50,12 @@ where :math:`a` and :math:`b` are integers. Taking :math:`a=10` and :math:`b=25`
     10 + 25 \mod 24 &= 35 \mod 24 \\
     &= 11 \mod 24.
     \end{align}
+
+.. Add a figure showing the clock and its relationship to the modulo operation.
+
+Caesar cipher in Python
+-----------------------
+Let us now introduce to modulo operation and the Caesar cipher using Python 3.
 
 Substitution Cipher
 ===================

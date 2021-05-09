@@ -27,3 +27,18 @@ This will print the string ``Hello world`` in the console.
 The concepts in this text will be explained using Python code examples, and the emphasis is on examples and experimentation. 
 There will also be an emphasis on poor implementation of cryptography in software, and how this can be remedied. In each chapter, 
 there are exercises that the reader should solve in order to reinforce understanding of the concepts.
+
+There will also be applications (systems) where cryptography plays a role, including password handling and Internet of Things.
+
+About the author
+================
+
+Henning Thomsen is a lecturer at University College of Northern Denmark, where he teaches courses and 
+in cryptography, network security, programming and Internet of Things. He also supervises project groups 
+in these areas. He has a Ph.D. in telecommunication from Aalborg University, where he has also worked as 
+a postdoctoral researcher in the field of traffic modeling for Internet of Things. 
+
+Feedback about the book
+=======================
+
+If you have any feedback, comments or suggestions about the book, you can contact me at ht1703@gmail.com.

@@ -6,6 +6,10 @@
 Applied Cryptography
 ================================================
 
+By Henning Thomsen
+
+*Some (most) chapters are still to be written.*
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
