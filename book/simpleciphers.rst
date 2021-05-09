@@ -55,7 +55,13 @@ where :math:`a` and :math:`b` are integers. Taking :math:`a=10` and :math:`b=25`
 
 Caesar cipher in Python
 -----------------------
-Let us now introduce to modulo operation and the Caesar cipher using Python 3.
+Let us now introduce to modulo operation and the Caesar cipher using Python 3, starting with the modulo operation. 
+
+In Python, modulo is computed using the % (percent) operator. For example, computing :math:`5 \mod 3` and printing the result in the 
+console, we would do::
+
+    result = 5 % 3
+    print(result)
 
 Substitution Cipher
 ===================
