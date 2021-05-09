@@ -36,7 +36,10 @@ The number three is used for both encrypting and decrypting, and this is called 
 
 The key is not limited to be three, it can be any integer. For example, the key could be :math:`8`. Using this key on the plaintext 
 ``ATTACK``, then "A" is shifted to "I", but when we shift "T", we reach the end of the alphabet, and therefore start at the beginning. 
-So "T" is shifted to "B". This is similar to a clock, where if the time is 10AM and we add 25 hours, we get to 11AM. We would get 
+So "T" is shifted to "B". This is because "T" is at position 20 in the alphabet, and adding 8, we get 28. But there are only 
+26 letters in the alphabet, so we must subtract 26 from 28, getting the position 2.
+
+This is similar to a clock, where if the time is 10AM and we add 25 hours, we get to 11AM. We would get 
 the same result if we added 1 hour, so the rule in this case is ``25 = 1``. In a similar way, ``26 = 2``. So in the clock example, 
 if we get 24 or above, we subtract 24. This is called computation *modulo* 24. We write the addition as follows:
 
@@ -96,7 +99,7 @@ In this first version, we will use an imperative approach. In the exercises, som
     # corresponding position
     ciphertext = ""
     for plainletter in plaintext:
-        cipherletterPosition = ( letterMapping[plainletter] + key ) % 24
+        cipherletterPosition = ( letterMapping[plainletter] + key ) % 26
         cipherletter = inverseLetterMapping[cipherletterPosition]
         ciphertext = ciphertext + cipherletter
 
@@ -107,12 +110,34 @@ In this first version, we will use an imperative approach. In the exercises, som
     # plaintext letter
     decryptedPlaintext = ""
     for cipherletter in ciphertext:
-        plainletterPosition = ( letterMapping[cipherletter] - key ) % 24
+        plainletterPosition = ( letterMapping[cipherletter] - key ) % 26
         plainletter = inverseLetterMapping[plainletterPosition]
         decryptedPlaintext = decryptedPlaintext + plainletter
 
     # Prints the decrypted plaintext, should be ATTACK
     print(decryptedPlaintext)
+
+There are two for-loops in the above code. One for *encrypting* the plaintext, 
+and another one for *decrypting* the ciphertext. In both of these loops, 
+we find the position of each letter, add (or subtract) the key, 
+and compute modulo 26, which is the alphabet size.
+
+Exercises
+---------
+
+**Exercise 1**: Starting from the Caesar cipher Python code, try with other keys. 
+Also try with *negative* key values. What happens?
+
+**Exercise 2**: Modify the Caesar cipher Python code, so that the encryption and 
+decryption is done using *functions*. Also have the user specify the key at the 
+start of the program using the builtin ``input`` function in Python.
+
+**Exercise 3**: How would you deal with spaces in the plaintext? Give some 
+suggestions, and try your suggestions in Python.
+
+**Exercise 4**: Suppose you are given the ciphertext ``GHIHQG``. How would you 
+find the corresponding plaintext *without* knowing the key?
+(Later in this chapter we will look into this in more detail.)
 
 Substitution Cipher
 ===================
@@ -121,10 +146,6 @@ The substitution cipher...
 Exclusive OR (XOR)
 ==================
 Another way
-
-Exercises
-=========
-Exercise 1: 
 
 Further Reading
 ===============
