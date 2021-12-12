@@ -18,7 +18,9 @@ An applied approach
 
 This book uses examples and code in Python to illustrate cryptography examples. 
 
-Python was chosen because it is an accessible language, while still being useful in practice. An example is given below::
+Python was chosen because it is an accessible language, while still being useful in practice. An example is given below
+
+.. code:: python
 
     print("Hello world")
 

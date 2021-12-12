@@ -17,6 +17,7 @@ In this cipher, we have an *alphabet* of letters,
 for simplicity we consider in this example the English alphabet:
 
 .. math::
+
     \{A, B, C, \ldots, Z\}.
 
 This is not the only possible alphabet, as we will see later in the book.
@@ -44,6 +45,7 @@ the same result if we added 1 hour, so the rule in this case is ``25 = 1``. In a
 if we get 24 or above, we subtract 24. This is called computation *modulo* 24. We write the addition as follows:
 
 .. math::
+
     a + b \mod 24,
 
 where :math:`a` and :math:`b` are integers. Taking :math:`a=10` and :math:`b=25` (as in the first example), the computation is:
@@ -61,7 +63,9 @@ Caesar cipher in Python
 Let us now introduce to modulo operation and the Caesar cipher using Python 3, starting with the modulo operation. 
 
 In Python, modulo is computed using the % (percent) operator. For example, computing :math:`5 \mod 3` and printing the result in the 
-console, we would do::
+console, we would do:
+
+.. code:: python
 
     result = 5 % 3
     print(result)
@@ -71,7 +75,9 @@ To implement the Caesar cipher in Python, let us first make a list of the requir
 * The cipher uses a fixed key, which is 3.
 * The cipher can encrypt and decrypt text from the standard English alphabet
 
-In this first version, we will use an imperative approach. In the exercises, some generalization will be proposed::
+In this first version, we will use an imperative approach. In the exercises, some generalization will be proposed:
+
+.. code:: python
 
     # Uses fixed key
     key = 3
