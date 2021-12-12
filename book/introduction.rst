@@ -32,6 +32,16 @@ there are exercises that the reader should solve in order to reinforce understan
 
 There will also be applications (systems) where cryptography plays a role, including password handling and Internet of Things.
 
+Other books about cryptography
+==============================
+
+There are many other books available which deal with cryptography. Some of them are listed below:
+
+The book A Graduate Course in Applied Cryptography by Dan Boneh and Victor Shroup [boneh2020graduate]_ 
+is an advanced-level text on cryptography.
+
+.. [boneh2020graduate] Dan Boneh and Victor Shoup: A graduate course in applied cryptography, 2020
+
 About the author
 ================
 
